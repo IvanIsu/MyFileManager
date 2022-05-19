@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+
+<VBox fx:controller="com.example.PanelClientController" xmlns:fx="http://javafx.com/fxml">
+
+    <VBox>
+
+        <HBox>
+            <ComboBox fx:id="disksBox" onAction="#selectDiskAction"></ComboBox>
+            <TextField fx:id="pathFiled" focusTraversable="false" editable="false" text=" test path" HBox.hgrow="ALWAYS"></TextField>
+            <Button text="UP" onAction="#btnPathUpAction"></Button>
+        </HBox>
+        <TableView fx:id="filesClient" VBox.vgrow="ALWAYS" />
+    </VBox>
+    <properties>
+        <ctrl><fx:reference source="controller"/> </ctrl>
+    </properties>
+</VBox>

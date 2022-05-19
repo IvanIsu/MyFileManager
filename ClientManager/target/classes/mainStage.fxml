@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:controller="com.example.MainController" xmlns:fx="http://javafx.com/fxml">
+
+    <VBox>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="Exit" onAction="#btnExitAction"/>
+            </Menu>
+            <Menu text="Help">
+                <MenuItem text="Help"/>
+            </Menu>
+        </MenuBar>
+
+<!--       <VBox>-->
+<!--           -->
+<!--       </VBox>-->
+        <HBox fx:id="testHbox" VBox.vgrow="ALWAYS">
+            <fx:include fx:id="leftServerFilePanel" source="panelServer.fxml" HBox.hgrow="ALWAYS"/>
+            <fx:include fx:id="rightClientFilePanel" source="panelClient.fxml" HBox.hgrow="ALWAYS"/>
+        </HBox>
+
+
+        <HBox spacing="10" alignment="CENTER">
+<!--            <Button text="cut" focusTraversable="false" minWidth="150" HBox.hgrow="ALWAYS"></Button> &lt;!&ndash;check Hgrow&ndash;&gt;-->
+            <Button text="copy" focusTraversable="false" minWidth="150" minHeight="35" HBox.hgrow="ALWAYS" onAction="#btnCopyAction"></Button>
+<!--            <Button text="insert" focusTraversable="false" minWidth="150" HBox.hgrow="ALWAYS"></Button>-->
+            <Button text="delete" focusTraversable="false" minWidth="150" minHeight="35" HBox.hgrow="ALWAYS" onAction="#btnDeleteAction"></Button>
+
+            <padding>
+                <Insets top="20"/>
+            </padding>
+        </HBox>
+        <padding>
+            <Insets bottom="25" left="5" right="5" top="1"/>
+        </padding>
+
+
+    </VBox>
+</VBox>

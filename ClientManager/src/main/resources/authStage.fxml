@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.PasswordField?>
+
+
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<VBox fx:controller="com.example.AuthController" xmlns:fx="http://javafx.com/fxml" alignment="CENTER" stylesheets="/Style.css" >
+    <VBox fx:id="authWindow" alignment="CENTER" spacing="5" visible="true">
+        <TextField fx:id="loginArea" promptText="login" maxWidth="300" minHeight="35"></TextField>
+        <PasswordField fx:id="passwordField" promptText="password" maxWidth="300" minHeight="35" onAction="#tryAuthorization" />
+        <HBox alignment="CENTER" spacing="5">
+            <Button fx:id="btrRegistration" text="Registration" minWidth="150" onAction="#btnToRegWindowAction"></Button>
+            <Button fx:id="btnEnter" text="Enter" minWidth="100" onAction="#tryAuthorization"></Button>
+        </HBox>
+
+    </VBox>
+    <VBox fx:id="regWindow" alignment="CENTER" spacing="5" visible="false">
+        <TextField fx:id="loginReg" promptText="enter login" maxWidth="300"></TextField>
+        <TextField fx:id="nickReg" promptText="enter nickname" maxWidth="300"></TextField>
+        <PasswordField fx:id="passReg" promptText="enter password" maxWidth="300"></PasswordField>
+        <HBox alignment="CENTER" spacing="5">
+            <Button fx:id = "btnBackReg" text="back" onAction="#btnBackToAuthWindowAction"></Button>
+            <Button fx:id="btnTryRegistration" text="Registration" onAction="#btnRegistrationAction"></Button>
+        </HBox>
+
+
+    </VBox>
+
+</VBox>
+<!--<AnchorPane fx:controller="com.example.AuthController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"-->
+<!--            minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">-->
+<!--<children>-->
+<!--    <TextArea fx:id="loginArea" layoutX="164.0" layoutY="170.0" prefHeight="31.0" prefWidth="272.0" promptText="login" style="-fx-background-color: 12;">-->
+<!--        <opaqueInsets>-->
+<!--            <Insets />-->
+<!--        </opaqueInsets></TextArea>-->
+<!--    <PasswordField fx:id="passwordField" layoutX="164.0" layoutY="217.0" prefHeight="38.0" prefWidth="272.0" promptText="password" onAction="#tryAuthorization" />-->
+<!--    <Label layoutX="90.0" layoutY="49.0" prefHeight="17.0" prefWidth="450.0" text="Network File Manager">-->
+<!--        <font>-->
+<!--            <Font name="Book Antiqua Bold" size="35.0" />-->
+<!--        </font>-->
+<!--        <padding>-->
+<!--            <Insets left="30.0" />-->
+<!--        </padding></Label>-->
+<!--    <Button fx:id="buttonTestAuth" onAction="#tryAuthorization" text="AUTH TEST" layoutX="20" layoutY="20" prefHeight="31.0" prefWidth="130"></Button>-->
+<!--    <Button fx:id="buttonFileList" onAction="#sendFileList" text="SEND FILE LIST" layoutX="20" layoutY="60" prefHeight="31.0" prefWidth="130"></Button>-->
+<!--    <Button fx:id="buttonTest" onAction="#nextScene" text="TEST NEXT SCENE"></Button>-->
+<!--</children>-->
+<!--</AnchorPane>-->
